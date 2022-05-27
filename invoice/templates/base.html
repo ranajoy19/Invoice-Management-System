@@ -1,0 +1,36 @@
+{% load static %}
+{% include 'navbar.html' %}
+
+<head>
+
+	 <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+	 <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+</head>
+<center><h1> {{context}} </h1></center>
+<style>
+
+    .form-text.text-muted{
+      display: none;
+    }
+
+</style>
+<div class="jumbotron">
+  <div class="row">
+	<div class="col-sm-4"></div>
+	<div class="col-sm-4">
+	  {% block title %}
+	  {% endblock %}
+	  {% block content %}
+	  {% endblock %}
+	</div>
+	<div class="col-sm-4"></div>
+  </div>
+</div>
